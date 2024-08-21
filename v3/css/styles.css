@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+
+    font-family: Arimo, Helvetica, Arial,'Segoe UI', Verdana, sans-serif;
+}
+
+body{
+   
+    background-image: url('../img/background.png');
+    background-repeat: repeat;
+    
+}
+
+
+/**
+-- background-color: rgb(234, 118, 0);
+background-color: rgb(34, 115, 209);
+background-color: rgb(39, 87, 135);
+background-color: rgb(56, 40, 157);
+background-color: rgb(61, 203, 177);
+*/
+a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    list-style-type: none;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+ul{
+    padding-left: 0px;
+}
+
+:root{
+    --color-Naranja:  rgb(234, 118, 0);
+    --color-Azul:  rgb(34, 115, 209);
+    --color-azulFondo:  rgb(39, 87, 135);
+}
+
+.alert {
+    padding: 15px;
+    background-color: #f44336; /* Color de fondo rojo */
+    color: white; /* Color del texto blanco */
+    font-size: 18px; /* Tamaño de la fuente */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.4); 
+}

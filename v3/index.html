@@ -1,0 +1,118 @@
+<!--
+    Página principal de Mega3D. Incluye el encabezado, el banner, el buscador de cursos, la sección de cursos y botones
+    de login
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navegador.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/buscador.css">
+    <link rel="stylesheet" href="css/cursos.css">
+    <link rel="stylesheet" href="css/oferta.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Pagina 2do Parcial</title>
+</head>
+<body>
+    <header>
+        <section class="navegador">
+            <a href="index.html">
+                <div class="_cont_logo">
+                    <img src="/v3/img/logo.png" alt="logo"><h2>Mega3D</h2>
+                </div>
+            </a>
+            <ul>
+                <li id="nombre-admin" class="llamado"></li>
+                <li id="to-mis-cursos" class="login"></li>
+                <li class="login"><a id="inicio-sesion-btn" href="./html/inicia_sesion.html">Login</a></li>
+                <li class="signUp"><a id="signup-sesion-btn" href="./html/inicia_sesion.html">Sign Up</a></li>
+            </ul>
+        </section>
+        <section class="banner">
+            <figcaption>
+                <span class="_banner_label">¡Más de 100 cursos gratis!</span>
+                <span class="_banner_label_2">unete ya a la familia de Mega3D</span>
+            </figcaption>
+            <img class="_banner_img" alt="banner" src="img/banner.png">
+        </section>
+    </header>
+    <main>
+        <section class="buscador">
+            <ul>
+                <div class="_buscador_labels">
+                    <li>ENCUENTRA EL CURSO QUE ESTAS BUSCANDO:</li>
+                    <li class="_b_l_ofertas">oferas disponibles cada semana</li>
+                </div>
+                <form class="_cont_buscador" id="busc-form">
+                    <input type="text" class="_buscador_box" id="busqueda" placeholder="Buscar">
+                    <button type="submit" class="_b_l_help">Buscar</button>
+                </form>
+            </ul>
+            <img class="_buscador_bg" alt="buscador img" src="img/decoration2.png">
+        </section>
+        <section class="cursos">
+            <div class="_cursos_botones" id="categoria-botones">
+
+            </div>
+            <ul class="_cursos_videos">
+
+            </ul>
+        </section>
+        <section class="oferta">
+            <div class="_o_cont">
+                <h3>UNETE Y OBTEN UN 20% DE DESCUENTO YA!</h3>
+                <p>With our responsive themes and mobile and desktop apps, enjoy a seamless experience on any device so will your blog the best visitors</p>
+            </div>
+            <div class="_o_join"><a href="./html/inicia_sesion.html">JOIN</a></div>
+            <img class="_oferta_img_decoracion" src="img/decoracion1.png" alt="img_decoracion">
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="_footer_enlaces">
+                <div class="_cont_logo">
+                    <img src="img/logo.png" alt="logo">
+                    <h2>Mega3D</h2> 
+                </div>
+                <div class="_f_e_links">
+                    <ul>
+                        <li><a href="#">Blend Programming</a></li>
+                        <li><a href="#">Mobile Programming</a></li>
+                        <li><a href="#">Maya Beginner</a></li>
+                        <li><a href="#">Blender Beginner</a></li>
+                    </ul>
+                    <ul> 
+                        <li><a href="#">Adobe Illustrator</a></li>
+                        <li><a href="#">Adobe Photoshop</a></li>
+                        <li><a href="#">Design Logo</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Maya Course</a></li>
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Video Making</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="_footer_final">     
+                <ul>
+                    <li>Copyright © MyCourse.io 2024. All Rights Reserved</li>
+                    <div class="_f_f_redes">
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/paginaPrincipal.js">
+    </script>
+
+</body>
+</html>

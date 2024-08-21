@@ -1,0 +1,95 @@
+<!-- 
+    Estructura básica de una página web con:
+    - Enlaces a hojas de estilo CSS para el diseño.
+    - Encabezado con un menú de navegación que incluye enlaces a inicio de sesión y registro.
+    - Sección principal que contiene un área para cursos.
+    - Pie de página con enlaces a diferentes categorías de cursos y redes sociales.
+    - Script para funcionalidad adicional en JavaScript.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/tu_curso.css">
+    <link rel="stylesheet" href="../css/navegador-log.css">
+    <link rel="stylesheet" href="../css/banner.css">
+    <link rel="stylesheet" href="../css/buscador.css">
+    <link rel="stylesheet" href="../css/cursos.css">
+    <link rel="stylesheet" href="../css/oferta.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/admin/curso-lecciones.css">
+    <link rel="stylesheet" href="../css/navegador.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Paginal 2do Parcial</title>
+</head>
+<body>
+    <header>
+        <section class="navegador">
+            <a href="../index.html">
+                <div class="_cont_logo">
+                    <img src="../img/logo.png" alt="logo"><h2>Mega3D</h2>
+                </div>
+            </a>
+            <ul>
+                <li id="nombre-admin" class="llamado"></li>
+                <li id="to-mis-cursos" class="login"></li>
+                <li class="login"><a id="inicio-sesion-btn" href="/html/inicia_sesion.html">Login</a></li>
+                <li class="signUp"><a id="signup-sesion-btn" href="/html/inicia_sesion.html">Sign Up</a></li>
+            </ul>
+        </section>
+        
+    </header>
+    <main>
+        <section class="panel_curso">
+            <div class="tus-cursos">
+
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="_footer_enlaces">
+                <div class="_cont_logo">
+                    <img src="../img/logo.png" alt="logo">
+                    <h2>Mega3D</h2> 
+                </div>
+                <div class="_f_e_links">
+                    <ul>
+                        <li><a href="#">Blend Programming</a></li>
+                        <li><a href="#">Mobile Programming</a></li>
+                        <li><a href="#">Maya Beginner</a></li>
+                        <li><a href="#">Blender Beginner</a></li>
+                    </ul>
+                    <ul> 
+                        <li><a href="#">Adobe Illustrator</a></li>
+                        <li><a href="#">Adobe Photoshop</a></li>
+                        <li><a href="#">Design Logo</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Maya Course</a></li>
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Video Making</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="_footer_final">     
+                <ul>
+                    <li>Copyright © MyCourse.io 2024. All Rights Reserved</li>
+                    <div class="_f_f_redes">
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/detalleMisCursos.js"></script>
+    
+</body>
+</html>

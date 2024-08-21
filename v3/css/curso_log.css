@@ -1,0 +1,171 @@
+.informacion_curso {
+    background-color: rgb(234, 118, 0);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+.curso-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.curso_raya{
+    opacity: 0.4;
+}
+
+.curso-video {
+    position: relative;
+    width: 70%;
+}
+
+.curso-video img {
+    width: 100%;
+    
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.video-overlay a {
+    display: block;
+}
+
+.video-overlay img {
+    width: 100px;
+}
+
+.curso-info {
+    text-align: center;
+    background-color: rgb(34, 115, 209);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.join-button {
+    background-color: rgb(39, 87, 135);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.join-button:hover {
+    background-color: #003377;
+}
+
+.autor {
+    margin-top: 20px;
+}
+
+.curso-body {
+    margin-top: 20px;
+}
+
+.curso-body h1 {
+    font-size: 34px;
+}
+
+.curso-body h2 {
+    font-size: 1.5em;
+    color: rgb(34, 115, 209);
+}
+
+.curso-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.curso-invitacion{
+    margin-bottom: 20px;
+}
+
+.curso-detalles, .curso-aprenderas, .curso-porques, .curso-beneficios {
+    width: 100%;
+}
+
+.curso-footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.curso-footer h3 {
+    margin-bottom: 10px;
+}
+
+.curso-footer p {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .curso-header{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .curso-info{
+        width: 210px;
+        height: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .informacion_curso{
+        padding: 60px 5% 40px;
+        margin: 40px 60px 0px;
+    }
+    .curso-header{
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+    }
+    .curso-video{
+        max-width: 660px;
+    }
+    .curso-info{
+        width: 310px;
+        font-size: 28px;
+    }
+    .join-button {
+        font-size: 28px;
+    }
+    .curso-info h3{
+        font-size: 30px;
+    }
+
+    .curso-contenido{
+        gap:40px
+    }
+    .curso-body{
+        font-size: 26px;
+
+    }
+    .curso-body h1 {
+        font-size: 42px;
+    }
+    
+    .curso-body h2 {
+        font-size: 1.5em;
+        color: rgb(34, 115, 209);
+    }
+}

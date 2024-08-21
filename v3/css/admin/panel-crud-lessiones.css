@@ -1,0 +1,31 @@
+.contenido-lessiones{
+    height: 800px;
+    display: none;
+}
+
+
+.contenido-lessiones .lista-lessiones{
+    margin: 4px auto 10px;
+    padding: 0px 60px;
+}
+
+.lista-lessiones .cont_elementos td{
+    border-bottom: 1px solid gray ;
+}
+.lista-lessiones .cont_elementos tr{
+    background-color: white;
+}
+.lista-lessiones .cont_elementos tr:hover{
+    background-color: rgb(212, 212, 212);
+}
+
+
+.item_selected {
+    background-color: #a0a0a0; /* Color de fondo para el elemento seleccionado */
+}
+@media (min-width: 768px){
+    .contenido-lessiones .lista-lessiones{
+        width: 90%;
+        
+    }
+}

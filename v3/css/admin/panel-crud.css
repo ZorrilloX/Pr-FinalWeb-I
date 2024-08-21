@@ -1,0 +1,136 @@
+#crear-curso, #crear-categoria {
+    position: fixed;
+    top: 90px;
+    z-index: 30;
+    width: 100%;
+    display: none;
+}
+
+#crear-curso form, #crear-categoria form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(223, 230, 241);
+    border-radius: 10px;
+    border: 6px solid rgba(113, 62, 255, 0.16);
+    padding: 20px;
+    align-items: center;
+    background-image: url(../../img/decoration4.png);
+    background-size: cover;
+}
+
+#crear-curso form ul, #crear-categoria form ul {
+    align-items: center;
+}
+
+.primera-seccion-c-c , .segunda-seccion-c-c{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#crear-curso form button, #crear-categoria form button {
+
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+#subir-portada{
+    border: 1px solid gray ;
+    border-radius: 12px;
+}
+#btn-crear-curso{
+    background-color: #4CAF50; /* Verde */
+}
+li #btn-cancelar, #btn-cancelar-categoria{
+    background-color: #cf5858;
+}
+
+form button:hover {
+    background-color: #45a049; /* Verde más oscuro */
+}
+.primera-seccion-c-c li,.segunda-seccion-c-c li{
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 80%;
+    border: none;
+    
+}
+.primera-seccion-c-c input,.segunda-seccion-c-c input,.segunda-seccion-c-c textarea {
+    padding: 6px;
+    max-width: 425px;
+
+}
+
+
+
+
+.subir-portada{
+    padding: 10px 0;
+    width: 100%;
+    align-items: center;
+}
+
+
+
+.subir-portada img{
+    width: 270px;
+    border: 2px solid rgb(61, 203, 177);
+}
+
+.segunda-seccion-c-c li:last-child{
+    display: flex;
+    flex-direction: row;
+}
+
+@media (min-width: 768px){
+    #crear-curso, #crear-categoria {
+        top: 60px;
+    }
+    
+    #crear-curso form, #crear-categoria form{
+        flex-direction: row;
+        margin: 20px;
+        align-items: start;
+        height: 490px;
+    }
+
+    #crear-categoria form {
+        height: auto;
+    }
+
+    .segunda-seccion-c-c #descripcion{
+        height: 260px;
+    }
+}
+
+@media (min-width: 1024px){
+    #crear-curso, #crear-categoria {
+        top: 160px;
+        padding: 20px 100px;
+    }
+    #crear-curso form, #crear-categoria form{
+        margin: 20px 120px;
+        height: 600px;
+        align-items: start;
+    }
+
+    #crear-categoria form {
+        height: auto;
+    }
+
+    .primera-seccion-c-c input,.segunda-seccion-c-c input,.segunda-seccion-c-c textarea {
+        padding: 10px;
+        max-width: 425px;
+    
+    }
+}

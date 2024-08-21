@@ -1,0 +1,155 @@
+.curso-lecciones{
+    margin-top: 100px;
+    padding: 20px;
+    background-color: rgb(234, 118, 0);
+    border-radius: 10px;
+    color: white;
+}
+
+/********************************/
+.presentacion{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    align-items: center;
+    border-bottom: 2px solid rgba(250, 250, 250, 0.6);
+}
+
+.titulo_video_pre img{
+    width: 90%;
+}
+
+.titulo_video_pre h1{font-size: 2em;}
+.titulo_video_pre h2{color: rgb(22, 101, 192);}
+.continuar-lession a{color:white; font-size: 1rem; }
+.datos-progreso h2 {color: rgb(22, 101, 192);}
+
+.barra-progreso {
+    height: 20px;
+    width: 100%;
+    max-width: 300px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progreso {
+    height: 100%;
+    width: 50%; /* Ajusta según el progreso real */
+    background-color: rgb(34, 115, 209);
+}
+
+.continuar-lession{
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: rgb(34, 115, 209);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    max-width: 200px;
+    
+}
+/********************************/
+.lecciones{
+    margin-top: 20px;
+    overflow: hidden;
+    border-bottom: 2px solid rgba(250, 250, 250, 0.6);
+}
+
+.lecciones li{
+    display: flex;
+    margin-top: 10px;
+    gap: 5px;
+    text-align: left;
+}
+
+.lecciones li img{
+    width: 50%;
+}
+.lecciones li:nth-child(even) {
+    background-color: rgba(250, 250, 250, 0.2); 
+}
+.lecciones li:last-child{
+    margin-bottom: 20px;
+}
+
+/********************************/
+.mensaje-final{
+    width: 80%;
+    margin: 20px 0;
+}
+
+.mensaje-final h2{color: rgb(22, 101, 192);}
+.mensaje-final {text-align: justify;}
+
+
+
+
+
+@media (min-width: 768px) {
+    .presentacion{
+        flex-direction: row;
+        justify-content: center;
+        align-items:start;
+    }
+    .titulo_video_pre img{
+        width: 400px;
+    }
+    .datos-progreso{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 2px;
+    }
+    .continuar-lession{
+        max-width: 150px;
+        margin: 20px auto;
+    }
+
+    /*************************/
+    
+    .lecciones ul{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-around;
+    }
+    .lecciones li{
+        flex-direction: column;
+        width: calc(33.33% - 20px);
+        max-width: 350px; 
+    }
+    .lecciones li img{
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .curso-lecciones{
+        padding: 40px 160px;
+        margin: 80px 60px 20px;
+    }
+    .titulo_video_pre img{
+        width: 100% ;
+        max-width: 600px;
+        
+    }
+    .presentacion{
+        align-items: center;
+    }
+
+    .lecciones ul{
+        gap: 40px;
+        justify-content: space-around;
+    }
+    .lecciones li{
+        width: calc(33.33% - 80px);   
+    }
+
+    .lecciones li:nth-child(even) {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}

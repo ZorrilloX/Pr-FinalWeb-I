@@ -1,0 +1,204 @@
+.panel_curso {
+    background-color: rgb(234, 118, 0);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 100px auto 20px;
+    
+}
+
+.panel_curso .curso-header {
+    text-align: center;
+    color: rgb(165, 207, 255);
+    font-size: large;
+    font-weight: bold;
+    font-size: larger;
+  }
+
+.panel_curso .curso-header h1 {
+    font-size: 32px;
+}
+
+.panel_curso .curso-progreso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.panel_curso .barra-progreso {
+    width: 80%;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.panel_curso .progreso {
+    width: 50%;
+    height: 20px;
+    background-color: #007bff;
+}
+
+.panel_curso .curso-contenido-principal {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.panel_curso .curso-video-principal {
+    width: 60%;
+}
+
+.panel_curso .curso-video-principal img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.panel_curso .curso-info-principal {
+    width: 30%;
+    text-align: center;
+}
+
+.panel_curso .curso-info-principal h2 {
+    font-size: 24px;
+    color: rgb(34, 115, 209);
+}
+
+.panel_curso .enter-button {
+    background-color: rgb(39, 87, 135);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.enter-button a{
+    color: white;
+}
+
+.panel_curso .enter-button:hover {
+    background-color: #003377;
+}
+
+.panel_curso .curso-raya {
+    opacity: 0.4;
+    margin: 20px 0;
+}
+
+.panel_curso .tus-cursos {
+    margin-top: 20px;
+}
+
+.panel_curso .tus-cursos h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.panel_curso .curso {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.panel_curso .curso img {
+    width: 120px;
+    height: 82px;
+}
+
+.panel_curso .curso-detalle {
+    width: 70%;
+    padding-left: 20px;
+}
+
+.panel_curso .curso-detalle p:first-child {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.panel_curso .curso-detalle p {
+    margin: 5px 0;
+}
+
+.panel_curso .barra-progreso {
+    width: 80%;
+    background-color: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.panel_curso .progreso {
+    width: 120px;
+    height: 10px;
+    background-color: #007bff;
+}
+
+@media (min-width: 768px) {
+    .panel_curso{
+        margin: 70px auto 0px;
+    }
+
+    .panel_curso .curso-contenido-principal {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .panel_curso .curso-info-principal {
+        width: 210px;
+        height: 100%;
+    }
+    .tus-cursos{
+        margin: 40px;
+    }
+    .panel_curso .curso img {
+        width: 200px;
+        height: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .panel_curso {
+        padding: 20px 5% 40px;
+        margin: 80px 150px 20px;
+        min-width: 1000px;
+    }
+    
+
+    .panel_curso .curso-header h1 {
+        font-size: 36px;
+    }
+
+    .panel_curso .curso-contenido-principal {
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .panel_curso .curso-video-principal {
+        max-width: 660px;
+    }
+
+    .panel_curso .curso-info-principal {
+        width: 310px;
+        font-size: 28px;
+    }
+
+    .panel_curso .enter-button {
+        font-size: 28px;
+    }
+
+    .panel_curso .curso-info-principal h2 {
+        font-size: 30px;
+    }
+
+    .panel_curso .curso {
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+    }
+}

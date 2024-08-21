@@ -1,0 +1,162 @@
+<!-- 
+    Este archivo HTML define una página para la visualización de un curso de introducción a Blender en Mega3D. 
+    Contiene las siguientes secciones:
+    - Un encabezado con el logo del sitio, el nombre del usuario, inicio de sesión y registro.
+    - Un área principal con la presentación del curso, una barra de progreso, una lista de lecciones y un mensaje final.
+    - Una sección de búsqueda para encontrar cursos con un campo de texto y un botón de búsqueda.
+    - Un pie de página con enlaces a cursos, redes sociales y derechos de autor.
+    - Incluye varios archivos CSS para el estilo y un enlace a Font Awesome para los iconos.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/admin/curso-lecciones.css">
+    <link rel="stylesheet" href="../css/navegador-log.css">
+    <link rel="stylesheet" href="../css/buscador.css">
+    <link rel="stylesheet" href="../css/cursos.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Paginal 2do Parcial</title>
+</head>
+<body>
+    <header>
+        <section class="navegador">
+            <div class="_cont_logo">
+                <img src="../img/logo.png" alt="logo">
+                <h2>Mega3D</h2> 
+            </div>
+            <ul>
+                <li><h3>José Hernandez</h3></li>
+                <li class="carrito"><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                <li class="login"><a id="inicio-sesion-btn" href="/html/inicia_sesion.html">Login</a></li>
+                <li class="signUp"><a id="signup-sesion-btn" href="/html/inicia_sesion.html">Sign Up</a></li>
+            </ul>
+        </section>
+        
+    </header>
+    <main>
+        <section class="curso-lecciones">
+            <article class="presentacion">
+                <div class="titulo_video_pre">
+                    <a href="https://www.youtube.com/watch?v=iIcHsLBE1gg&list=PLBn8E6Sfz0f0UCTEHQ7pL7KKsrvi6HK-8&index=1" target="_blank">
+                        <img src="../img/curso_login.png" alt="video_presentacion">
+                    </a>
+                    <h1> Curso de introduccion a Blender</h1>
+                    <h2>¡Desbloque tu creatividad y domina el arte del diseño 3D!</h2>
+                </div>
+                <div class="datos-progreso">
+                    <h2>¿Qué tan lejos llegarás hoy?</h2>
+                    <h3>progreso:</h3>
+                    <div class="barra-progreso">
+                        <div class="progreso"></div>
+                    </div>
+                    <h4>Por:"Blendtuts-ES"</h4>
+                    <button class="continuar-lession"><a href="nextSeccion();">continuar lession</a></button>
+                </div>
+            </article>
+            <article class="lecciones">
+                <ul>
+                    <li>
+                        <img src="/img/curso_login.png" alt="lecciones de ejemplo">
+                        <h3>Descarga e instalación (Introducción a BLender 2.80 #01)</h3>
+                    </li>
+                    <li>
+                        <img src="/img/curso_login.png" alt="lecciones de ejemplo">
+                        <h3>Descarga e instalación (Introducción a BLender 2.80 #01)</h3>
+                    </li>
+                    <li>
+                        <img src="/img/curso_login.png" alt="lecciones de ejemplo">
+                        <h3>Descarga e instalación (Introducción a BLender 2.80 #01)</h3>
+                    </li>
+                    <li>
+                        <img src="/img/curso_login.png" alt="lecciones de ejemplo">
+                        <h3>Descarga e instalación (Introducción a BLender 2.80 #01)</h3>
+                    </li>
+                    <li>
+                        <img src="/img/curso_login.png" alt="lecciones de ejemplo">
+                        <h3>Descarga e instalación (Introducción a BLender 2.80 #01)</h3>
+                    </li>
+                    <li>
+                        <img src="/img/curso_login.png" alt="lecciones de ejemplo">
+                        <h3>Descarga e instalación (Introducción a BLender 2.80 #01)</h3>
+                    </li>
+                    <li>
+                        <img src="/img/curso_login.png" alt="lecciones de ejemplo">
+                        <h3>Descarga e instalación (Introducción a BLender 2.80 #01)</h3>
+                    </li>
+                    <li>
+                        <img src="/img/curso_login.png" alt="lecciones de ejemplo">
+                        <h3>Descarga e instalación (Introducción a BLender 2.80 #01)</h3>
+                    </li>
+                    <li>
+                        <img src="/img/curso_login.png" alt="lecciones de ejemplo">
+                        <h3>Descarga e instalación (Introducción a BLender 2.80 #01)</h3>
+                    </li>
+                </ul>
+            </article>
+            <article class="mensaje-final">
+                <h2>Blengo Daniel Vazquez Moreno</h2>
+                <p>Actualmente, la versatilidad y la agilidad son dos requisitos a tener en cuenta a la hora de crear contenido audiovisual de calidad. Por eso, Blender será tu nuevo mejor aliado, ya que combina ambos conceptos en un solo software.</p>
+            </article>
+        </section>
+        
+        <section class="buscador">
+            <ul>
+                <div class="_buscador_labels">
+                    <li>ENCUENTRA EL CURSO QUE ESTAS BUSCANDO:</li>
+                    <li class="_b_l_ofertas">oferas disponibles cada semana</li>
+                </div>
+                <form class="_cont_buscador">
+                    <input type="text" class="_buscador_box" name="busqueda" placeholder="Buscar">
+                    <button type="submit" class="_b_l_help">Buscar</button>
+                </form>
+            </ul>
+            <img class="_buscador_bg" alt="buscador img" src="../img/decoration2.png">
+        </section>
+        
+        
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="_footer_enlaces">
+                <div class="_cont_logo">
+                    <img src="../img/logo.png" alt="logo">
+                    <h2>Mega3D</h2> 
+                </div>
+                <div class="_f_e_links">
+                    <ul>
+                        <li><a href="#">Blend Programming</a></li>
+                        <li><a href="#">Mobile Programming</a></li>
+                        <li><a href="#">Maya Beginner</a></li>
+                        <li><a href="#">Blender Beginner</a></li>
+                    </ul>
+                    <ul> 
+                        <li><a href="#">Adobe Illustrator</a></li>
+                        <li><a href="#">Adobe Photoshop</a></li>
+                        <li><a href="#">Design Logo</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Maya Course</a></li>
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Video Making</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="_footer_final">     
+                <ul>
+                    <li>Copyright © MyCourse.io 2024. All Rights Reserved</li>
+                    <div class="_f_f_redes">
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

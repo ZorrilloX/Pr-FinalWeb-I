@@ -1,0 +1,91 @@
+.buscador{
+    position: relative;
+    background-color: rgb(34, 115, 209);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px 0px;
+    color: white;
+    height: 180px;
+    overflow: hidden;
+}
+
+._buscador_bg{
+    position:absolute;
+    width: 300px;
+    height: 100%;
+    right: 0px;
+    top: 0px;
+}
+.buscador ul{
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+._buscador_labels{
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+._b_l_ofertas{
+    opacity: 0.7;
+    font-size: 18px;
+}
+._cont_buscador{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+._buscador_box {
+    padding: 5px;
+    opacity: 0.4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+
+}
+._b_l_help{
+    background-color: rgb(61, 203, 177);
+    border-style: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+}
+
+@media (min-width: 768px){
+   
+    .buscador{
+        margin: 10px 10px;
+        height: 150px;
+        align-items: center;
+    }
+
+    .buscador ul{
+        flex-direction: row;
+        margin: 10px 10px;
+    }
+
+    ._cont_buscador{
+        width: 400px;
+    }
+}
+
+@media (min-width: 1024px){
+    .buscador{
+        margin: 10px 60px;
+        padding: 30px 50px;
+    }
+    ._buscador_box{
+        width: 500px;
+    }
+    ._buscador_labels{
+        font-size: 22px;
+    }
+}
+
+
+

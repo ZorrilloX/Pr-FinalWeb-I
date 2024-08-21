@@ -1,0 +1,298 @@
+<!-- 
+    Este archivo HTML define una página para la gestión de cursos y lecciones en el panel de administración de Mega3D. 
+    Contiene las siguientes secciones:
+    - Un encabezado con el logo del sitio y enlaces para iniciar sesión y registrarse.
+    - Un área principal con formularios para crear cursos, lecciones y categorías, así como un panel para filtrar y gestionar cursos y lecciones.
+    - Sección para buscar, agregar y gestionar cursos y lecciones.
+    - Un pie de página con enlaces a cursos, redes sociales y derechos de autor.
+    - Incluye varios archivos CSS específicos para el panel de administración y un archivo JavaScript para manejar las funcionalidades de administración.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/navegador-log.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <link rel="stylesheet" href="../css/admin/panel-crud.css">
+    <link rel="stylesheet" href="../css/admin/panel-herramientas-cursos.css">
+    <link rel="stylesheet" href="../css/admin/panel-filtro.css">
+    <link rel="stylesheet" href="../css/admin/panel-crud-lessiones.css">
+    <link rel="stylesheet" href="../css/admin/lista-lessiones.css">
+    <link rel="stylesheet" href="../css/navegador.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Paginal 2do Parcial</title>
+    
+</head>
+<body>
+    <header>
+        <section class="navegador">
+            <a href="../index.html">
+                <div class="_cont_logo">
+                    <img src="../img/logo.png" alt="logo"><h2>Mega3D</h2>
+                </div>
+            </a>
+            <ul>
+                <li id="nombre-admin" class="llamado"></li>
+                <li id="to-mis-cursos" class="login"></li>
+                <li class="login"><a id="inicio-sesion-btn" href="/html/inicia_sesion.html">Login</a></li>
+                <li class="signUp"><a id="signup-sesion-btn" href="/html/inicia_sesion.html">Sign Up</a></li>
+            </ul>
+        </section>
+    </header>
+    <main>
+        <section id="crear-curso">
+            <form id="crear-curso-form">
+                <ul class="primera-seccion-c-c">
+                    <li class="subir-portada">
+                        <div class="cont_portada">
+                            <img id="preview-portada" src="../img/subir portada.png" alt="sube tu portada de curso">
+                        </div>
+                        <label for="curso-portada">Subir Portada</label>
+                        <input id="curso-portada" type="file"  name="portada" accept="image/*">
+                    </li>
+                    <li>
+                        <label for="nombre-curso">Nombre del Curso:</label>
+                        <input type="text" id="nombre-curso" name="nombre-curso" placeholder="Modelado y render">
+                    </li>
+                    <li>
+                        <label for="categoria-curso">Categoria:</label>
+                        <select id="categoria-curso">
+
+                        </select>
+                    </li>
+                </ul>
+                <ul class="segunda-seccion-c-c">
+                    <li>
+                        <label for="profesional">Profesional:</label>
+                        <input type="text" id="profesional" name="profesional" placeholder="Pepito master">
+                    </li>
+                    <li>
+                        <label for="descripcion">Descripción:</label>
+                        <textarea id="descripcion" name="descripcion" placeholder="cuentanos de que va tu curso"></textarea>
+                    </li>
+                    <li>
+                        <button id="btn-crear-curso" type="submit">Crear Curso</button>
+                        <button id="btn-cancelar" onclick="event.preventDefault();ocultarElem('crear-curso')">Cancelar</button>
+                    </li>
+                </ul>
+            </form>
+        </section>
+        <section id="crear-leccion">
+            <form id="crear-leccion-form">
+                <ul class="primera-seccion-c-c">
+                    <li class="subir-portada">
+                        <label for="leccion-portada">Enlace de video YouTube (opcional)</label>
+                        <input id="leccion-portada" type="text" name="portada">
+                    </li>
+                    <li>
+                        <label for="nombre-leccion">Nombre de la Lección:</label>
+                        <input type="text" id="nombre-leccion" name="nombre-leccion" placeholder="Introducción al tema">
+                    </li>
+                    <li>
+                        <label id="orden-lecc-label">
+
+                        </label>
+                    </li>
+                    <li>
+                        <label for="tipo-leccion">Tipo de Lección:</label>
+                        <select id="tipo-leccion" name="tipo-leccion">
+                            <option value="video">Video</option>
+                            <option value="blog">Blog</option>
+                        </select>
+                    </li>
+                </ul>
+                <ul class="segunda-seccion-c-c">
+                    <li>
+                        <label for="subtitulo">Subtitulo de presentación:</label>
+                        <input type="text" id="subtitulo" name="subtitulo"
+                               placeholder="Subtítulo de presentación para la lección.">
+                    </li>
+                    <li>
+                        <label for="contenido">Contenido:</label>
+                        <textarea id="contenido" name="contenido" placeholder="Descripción detallada de la lección"></textarea>
+                    </li>
+                    <li>
+                        <button id="btn-crear-leccion" type="submit">Crear Lección</button>
+                        <button id="btn-cancelar-leccion"
+                                onclick="event.preventDefault();limpiarLeccion()">
+                            Cancelar</button>
+                    </li>
+                </ul>
+            </form>
+        </section>
+
+        <section id="crear-categoria">
+            <form id="crear-categoria-form">
+                <ul class="primera-seccion-c-c">
+                    <li class="subir-portada">
+                        <input id="categoria-portada" type="text" name="portada">
+                    </li>
+                    <li>
+                        <button style="background-color: #ADADAD" id="btn-crear-categoria"
+                                type="submit" disabled>
+                            Añadir Categoría</button>
+                    </li>
+                    <li >
+                        <button id="btn-cancelar-categoria"
+                                onclick="event.preventDefault();limpiarCategoria()">
+                            Volver</button>
+                    </li>
+                </ul>
+                <ul class="segunda-seccion-c-c">
+                    <article style="margin-top: 0" class="contenido-cursos" id="seccion-categoria">
+                        <table>
+                            <thead class="cont_columnas">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Acciones</th>
+                            </tr>
+                            </thead>
+                            <tbody class="cont_elementos" id="click-categoria">
+
+                            </tbody>
+                        </table>
+                    </article>
+                </ul>
+            </form>
+        </section>
+
+        <section style="z-index: 20; max-width: 50%;" class="panel-filtro">
+            <section class="menu-bar">
+                <label class="menu-mobile-label" for="menu-switch"><i class="fa-solid fa-bars"></i></label>
+                <input type="checkbox" id="menu-switch">
+                <div class="_cont_p_f" id="opciones-filtrado">
+                    <h1>Base<br> de datos</h1>
+                    <ul>
+                        <li onclick="filtrarCursos('')">Todos</li>
+                        <li onclick="filtrarCursos('nuevo')">Nuevos</li>
+                        <li onclick="filtrarCursos('popular')">Populares</li>
+                        <li onclick="filtrarCursos('basico')">Nivel Básico</li>
+                        <li onclick="filtrarCursos('intermedio')">Nivel Intermedio</li>
+                        <li onclick="filtrarCursos('avanzado')">Nivel Avanzado</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+
+        <section class="panel-trabajo">
+            <article class="panel-herramientas">
+                <div style="z-index:30;" class="toolbar">
+                    
+                    <form id="busc-admin-search" class="buscador-admin">
+                            <input type="text" class="_buscador_box" name="busqueda" id="search-bar-admin" placeholder="Buscar">
+                            <button type="submit" class="btn_buscar">Buscar</button>
+                    </form>
+                </div>
+
+                <div style="z-index: 2;" class="crud-toolbar">
+                    <button onclick="mostrarElem('crear-categoria')"
+                            id="btn-gestion-categorias" class="crud-btn" title="Categorías" aria-label="Categorías" style="background-color: rgb(61, 203, 177)">
+                        Categorías
+                    </button>
+                    <button onclick="limpiarCurso();mostrarElem('crear-curso')" id="btn-nuevo-curso" class="crud-btn" title="Crear" aria-label="Crear">
+                        <i class="fas fa-plus"></i>Curso
+                    </button>
+                    <button onclick="mostrarElem('crear-leccion')" id="btn-nueva-leccion" class="crud-btn" title="Leer" aria-label="Crear">
+                        <i class="fas fa-plus"></i>Lección
+                    </button>
+                    <button onclick="mostrarElem('seccion-cursos');ocultarElem('seccion-lecciones');limpiarCurso()" class="crud-btn" title="Atras" aria-label="Leer">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                </div>
+            </article>
+            
+            <article class="contenido-cursos" id="seccion-cursos">
+                <table>
+                    <thead class="cont_columnas">
+                        <tr>
+                            <th>ID</th>
+                            <th>Curso</th>
+                            <th>Autor</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="cont_elementos" id="click-container">
+
+                    </tbody>
+                </table>
+            </article>
+
+            <article class="contenido-lessiones" id="seccion-lecciones">
+                <article class="contenido-cursos">
+                    <table>
+                        <thead class="cont_columnas">
+                            <tr>
+                                <th>ID</th>
+                                <th>Curso</th>
+                                <th>Autor</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody class="cont_elementos" id="dblclick-container">
+
+                        </tbody>
+                    </table>
+                </article>
+                <table class="lista-lessiones">
+                    <thread class="cont_columnas">
+                        <tr>
+                            <th>Número</th>
+                            <th>Título</th>
+                            <th>Tipo</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thread>
+                    <tbody class="cont_elementos" id="lecciones-container">
+
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="_footer_enlaces">
+                <div class="_cont_logo">
+                    <img src="../img/logo.png" alt="logo">
+                    <h2>Mega3D</h2> 
+                </div>
+                <div class="_f_e_links">
+                    <ul>
+                        <li><a href="#">Blend Programming</a></li>
+                        <li><a href="#">Mobile Programming</a></li>
+                        <li><a href="#">Maya Beginner</a></li>
+                        <li><a href="#">Blender Beginner</a></li>
+                    </ul>
+                    <ul> 
+                        <li><a href="#">Adobe Illustrator</a></li>
+                        <li><a href="#">Adobe Photoshop</a></li>
+                        <li><a href="#">Design Logo</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Maya Course</a></li>
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Video Making</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="_footer_final">     
+                <ul>
+                    <li>Copyright © MyCourse.io 2024. All Rights Reserved</li>
+                    <div class="_f_f_redes">
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/funcionesAdmin.js">
+    </script>
+</body>
+</html>
